@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Master extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,29 +20,21 @@ class Users extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('homepage_view');
+	}
+	public function Home()
+	{
+		redirect('/Homepage');
+	}
+	public function SignIn() {
 		$this->load->view('main');
 	}
+	public function Register() {
+		$this->load->view('main');
+	}
+	public function Show()
+	{
+		$this->load->view('messages_view');
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
